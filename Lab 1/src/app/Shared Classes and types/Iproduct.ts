@@ -1,4 +1,4 @@
-interface Iproduct{
+export interface Iproduct{
     ID:number;
     Name:string;
 	Quantity :number;

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Iproduct } from '../Shared Classes and types/Iproduct';
+import { Icategory } from '../Shared Classes and types/ICategory';
+import { DiscountOffers }  from '../Shared Classes and types/Enum';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -7,21 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
-  Discount:DiscountOffers=DiscountOffers['.10'];
-  Storename:string="addidas";
-  Storelogo:string="nikke";
-  ProductList:string[]=["ID","name","Quantity","Price","Img"]
-  CategoryList:string[]=["number","string"]
-  ClientName:string="ahmed";
-  IsPurshased:boolean=false;
+  constructor() {
+    this.Discount=DiscountOffers.value1,
+    this.StoreName="addidas",
+    this.StoreLogo='./assets/banner.jpg',
+    this.ClientName='Ahmed Hamdy',
+    this.IsPurshased=true
+    this.ProductList=[]
+    this.CategoryList=[]
 
+   }
+   Discount:DiscountOffers ;
+   StoreName:string ;
+   StoreLogo:string;
+   ProductList:Iproduct[];
+   CategoryList:Icategory[];
+   ClientName:string;
+   IsPurshased:boolean;
   ngOnInit(): void {
   }
 
-}
-enum DiscountOffers {
-  NoDiscount,
-  ".10" ,
- ".15" ,
 }

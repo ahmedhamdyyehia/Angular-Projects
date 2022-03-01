@@ -10,10 +10,27 @@ export class AppComponent {
   ClientName:string="ahmed";
   Discount:DiscountOffers=DiscountOffers['.10'];
   Storelogo:string="nikke";
+  discount="NoDiscount";
+  CategoryList:string[]=["number","string"]
+  ProductList:string[]=["ID","name","Quantity","Price","Img"]
+  UserName="";
+  isPurchsed=false;
+  fullname:string="ahmed hamdy"
+
+
+  purshase(){
+
+   this.isPurchsed=true;
+
+
+  }
+
+
 }
 enum DiscountOffers {
   NoDiscount,
   ".10" ,
  ".15" ,
 }
+
 
