@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Iproduct } from '../Shared Classes and types/Iproduct';
 import { Icategory } from '../Shared Classes and types/ICategory';
 import { DiscountOffers }  from '../Shared Classes and types/Enum';
+  import { ProductServiceService } from '../services/product-service.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -9,7 +10,8 @@ import { DiscountOffers }  from '../Shared Classes and types/Enum';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() {
+  constructor(private productService:ProductServiceService)
+   {
     this.Discount=DiscountOffers.value1,
     this.StoreName="addidas",
     this.StoreLogo='./assets/banner.jpg',
@@ -26,6 +28,15 @@ export class ProductsComponent implements OnInit {
    CategoryList:Icategory[];
    ClientName:string;
    IsPurshased:boolean;
+   productList:any;  
+   ProductID:any;  
+
+   renderValues(){
+  
+    return this.productList=this.productService.GetAllProducts();
+  }
+  
+
   ngOnInit(): void {
   }
 
