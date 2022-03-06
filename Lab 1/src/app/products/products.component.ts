@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Iproduct } from '../Shared Classes and types/Iproduct';
 import { Icategory } from '../Shared Classes and types/ICategory';
 import { DiscountOffers }  from '../Shared Classes and types/Enum';
-  import { ProductServiceService } from '../services/product-service.service';
+import { ProductServiceService } from '../services/product-service.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',

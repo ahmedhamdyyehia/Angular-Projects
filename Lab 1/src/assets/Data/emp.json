@@ -1,0 +1,5 @@
+ [
+     {"name":"phone","price":5000}
+    ,{"name":"tv","price":7000}
+    ,{"name":"laptop","price":10000}
+]

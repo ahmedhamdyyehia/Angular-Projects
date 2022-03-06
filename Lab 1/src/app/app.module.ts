@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +17,10 @@ import { PipesComponent } from './pipes/pipes.component';
 import { PipePercentComponent } from './pipes/pipe-percent/pipe-percent.component';
 import { SquarePipe } from './square.pipe';
 import { PercentPipe } from './percent.pipe';
+import {HttpClientModule} from '@angular/common/http';
+import { ListComponent } from './list/list.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { DepartmentComponent } from './department/department.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +38,16 @@ import { PercentPipe } from './percent.pipe';
     PipesComponent,
     PipePercentComponent,
     SquarePipe,
-    PercentPipe
+    PercentPipe,
+    ListComponent,
+    EmployeesComponent,
+    DepartmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
